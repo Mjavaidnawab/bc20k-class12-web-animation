@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+justify-content:center;
+
+
+
+        }
+        #box{
+height: 300px;
+width: 300px;
+background-color:blueviolet;
+display: flex;
+justify-content:center;
+align-items:center;
+text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>PIAIC Boot Camp 2020 Class 12 - Web Animation</h1>
+   <div id = "box">
+        <h2>Warning!</h2>
+    </div>
+        
+    <script> 
+    var elem = document.querySelector('#box')
+    elem.animate([
+        { transform : 'scale(0.5)' , background:'white', color : 'white' }, //0.5 = 50% half
+        { transform : 'scale(1)' , background: 'red' , color : 'white'},   //1 = 100 percent
+        { transform : 'scale(0.5)' , background:'white' , color : 'white'}, //2 = Double
+        
+
+    ],{
+        duration :2800,
+        iterations: Infinity
+    })
+    
+    </script>
+</body>
+</html>

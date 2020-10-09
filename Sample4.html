@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    </title>
+        <style>
+            
+            body{
+                background-image: url('./Images/bg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+
+
+
+
+</head>
+<body>
+    <h2> PIAIC Boot Camp 2020 Class 12 - Web Animation </h2>
+    <h2> Student : Muhammad Javaid Nawab</h2>
+    <h2> Press and hold the Mouse Button to stop the Cat - Event Handling : Mousedown / Mouseup</h2>
+    <!--<img src="https://www.animatedimages.org/data/media/209/animated-cat-image-0072.gif" id ="cloud"/> -->
+    <img src ="./Images/animated-cat-image-0072.gif" id = "cat" height = 150px/>
+    <script>
+        var elem = document.querySelector('#cat');
+
+
+        var animatedElem = elem.animate([
+            {transform: 'translate(0,550px)'},
+            {transform: 'translate(1360px,550px)'},
+            // { transform: 'scaleX(-1)'},
+            //{transform: 'translate(1360px,0)'},
+            // {transform: 'translate(0,0)'},
+
+        ],{
+            duration :8000,
+            iterations: Infinity
+        })
+        document.addEventListener("mousedown", ()=>{
+            animatedElem.pause();
+        })
+        document.addEventListener("mouseup", ()=>{
+            animatedElem.play();
+        })
+/*        elem.animate([
+            {transform: 'translate(0,0)'},
+            {transform: 'translate(1360px,0)'},
+            { transform: 'scaleX(-1)'},
+            {transform: 'translate(1360px,0)'},
+            {transform: 'translate(0,0)'},
+
+        ],{
+            duration :4000,
+            iterations: Infinity
+        })
+        */
+
+        /*elem.animate([
+            //{transform: 'translate(0,0)'},
+           // {transform: 'translate(1360px,0)'},
+            { transform: 'scaleX(-1)'},
+            {transform: 'translate(1360,0)'},
+            {transform: 'translate(0,0)'},
+
+        ],{
+            duration :4000,
+            iterations: Infinity
+        })*/
+    </script>
+    
+</body>
+</html>
